@@ -1,0 +1,153 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+/* Container centering */
+.admin-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Form styling */
+.admin-register-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.admin-register-form:hover {
+  transform: translateY(-2px);
+}
+
+/* Heading */
+.admin-register-form h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Label styling */
+.admin-register-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+/* Input styling */
+.admin-register-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f9fb;
+  font-size: 15px;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.admin-register-form input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  outline: none;
+}
+
+/* Button styling */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #667eea;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #5a67d8;
+}
+
+.User-tab{
+  width: 100%;
+  padding: 12px;
+  background-color: #8c9bde;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.User-tab:hover{
+  background-color: #667eea;
+}
+
+/* Navigation link */
+.login-navigate {
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  color: #666;
+}
+
+.login-navigate a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .admin-register-form {
+    padding: 30px 20px;
+  }
+
+  .admin-register-form h2 {
+    font-size: 22px;
+  }
+
+  .admin-register-form button {
+    font-size: 15px;
+  }
+}
+
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make file input spacing match others */
+.input-group input[type="file"] {
+  padding: 8px 0;
+}
+
+/* Optional: make it stack on smaller screens */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
