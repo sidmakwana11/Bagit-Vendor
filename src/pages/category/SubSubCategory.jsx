@@ -38,19 +38,19 @@ const SubSubCategory = () => {
   }, [selectedCategory]);
 
   const fetchCategories = async () => {
-    const res = await fetch("http://localhost:5003/api/categories");
+    const res = await fetch("https://bagit-category-service.onrender.com/api/categories");
     const data = await res.json();
     setCategories(data.map((c) => c.category));
   };
 
   const fetchSubCategoriesByCategory = async (category) => {
-    const res = await fetch(`http://localhost:5003/api/subcategories/byCategory/${category}`);
+    const res = await fetch(`https://bagit-category-service.onrender.com/api/subcategories/byCategory/${category}`);
     const data = await res.json();
     setSubCategories(data.map((s) => s.subCategory));
   };
 
   const fetchSubSubCategories = async (page = 1) => {
-    const res = await fetch(`http://localhost:5003/api/subsubcategories?page=${page}&limit=${ITEMS_PER_PAGE}`);
+    const res = await fetch(`https://bagit-category-service.onrender.com/api/subsubcategories?page=${page}&limit=${ITEMS_PER_PAGE}`);
     const result = await res.json();
 
     setSubSubCategories(result.data);
@@ -60,7 +60,7 @@ const SubSubCategory = () => {
 
   const handleAdd = async () => {
     try {
-      const res = await fetch("http://localhost:5003/api/subsubcategories/addSubSubCategory", {
+      const res = await fetch("https://bagit-category-service.onrender.com/api/subsubcategories/addSubSubCategory", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -93,7 +93,7 @@ const SubSubCategory = () => {
     });
 
     if (result.isConfirmed) {
-      await fetch(`http://localhost:5003/api/subsubcategories/${id}`, {
+      await fetch(`https://bagit-category-service.onrender.com/api/subsubcategories/${id}`, {
         method: "DELETE",
       });
       toast.success("Deleted");
