@@ -22,7 +22,7 @@ const Category = () => {
 
     const fetchCategories = async () => {
         try {
-            const res = await fetch("http://localhost:5003/api/categories");
+            const res = await fetch("https://bagit-category-service.onrender.com/api/categories");
             const data = await res.json();
             setAllCategories(data);
             setFilteredCategories(data);
@@ -57,7 +57,7 @@ const Category = () => {
         }
 
         try {
-            const res = await fetch(`http://localhost:5003/api/categories/update/${id}`, {
+            const res = await fetch(`https://bagit-category-service.onrender.com/api/categories/update/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ category: editedCategoryName.trim() }),
@@ -85,7 +85,7 @@ const Category = () => {
         console.log("New Category Payload:", { category: newCategory });
 
         try {
-            const res = await fetch("http://localhost:5003/api/categories/addCategory", {
+            const res = await fetch("https://bagit-category-service.onrender.com/api/categories/addCategory", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ category: newCategory.trim() }),
@@ -127,7 +127,7 @@ const Category = () => {
             });
 
             if (result.isConfirmed) {
-                const res = await fetch(`http://localhost:5003/api/categories/${id}`, {
+                const res = await fetch(`https://bagit-category-service.onrender.com/api/categories/${id}`, {
                     method: 'DELETE',
                 });
 
