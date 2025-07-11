@@ -20,7 +20,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const email = localStorage.getItem('email'); 
-        const res = await fetch(`http://localhost:5000/api/admin/profile?email=${email}`);
+        const res = await fetch(`https://bagit-admin-service.onrender.com/api/admin/profile?email=${email}`);
         const data = await res.json();
         setFormData({
           name: data.name,
@@ -83,7 +83,7 @@ const Profile = () => {
         form.append('image', formData.imageFile);
       }
 
-      const res = await fetch(`http://localhost:5000/api/admin/update`, {
+      const res = await fetch(`https://bagit-admin-service.onrender.com/api/admin/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
