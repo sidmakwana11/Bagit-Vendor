@@ -12,7 +12,7 @@ const Team = () => {
   const fetchAdmins = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/admin/related`, {
+      const res = await fetch(`https://bagit-admin-service.onrender.com/api/admin/related`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ const handleDelete = async (adminId) => {
   if (result.isConfirmed) {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/admin/${adminId}`, {
+      const res = await fetch(`https://bagit-admin-service.onrender.com/api/admin/${adminId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
