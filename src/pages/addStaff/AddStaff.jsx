@@ -56,7 +56,7 @@ const AddStaff = () => {
         return;
       }
   
-      const res = await fetch("http://localhost:5000/api/admin/staff/register", {
+      const res = await fetch("https://bagit-admin-service.onrender.com/api/admin/staff/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
