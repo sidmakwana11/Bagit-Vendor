@@ -71,7 +71,7 @@ const AddProducts = () => {
       formData.append("userId", userId);
       formData.append("image", product.image); 
   
-      const res = await fetch("http://localhost:5001/api/products/addproduct", {
+      const res = await fetch("https://bagit-product-service.onrender.com/api/products/addproduct", {
         method: "POST",
         body: formData, 
       });
