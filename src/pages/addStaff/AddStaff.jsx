@@ -27,7 +27,7 @@ const AddStaff = () => {
       if (file) {
         setFormData(prev => ({
           ...prev,
-          image: file // save the actual File object, not URL
+          image: file 
         }));
       }
     } else {
