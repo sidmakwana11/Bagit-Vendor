@@ -5,7 +5,7 @@ const Email = () => {
   const navigate = useNavigate();
 
   const handleBackToShopping = () => {
-    navigate(-1); // Replace with your actual route
+    navigate(-1);
   };
 
   return (
