@@ -61,7 +61,7 @@ const LoginForm = () => {
           <input
             type="text"
             name="email"
-            placeholder="Enter your email"
+            placeholder="Enter email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -72,7 +72,7 @@ const LoginForm = () => {
           <input
             type="password"
             name="password"
-            placeholder="Enter your password"
+            placeholder="Enter password"
             value={formData.password}
             onChange={handleChange}
             required
